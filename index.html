@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+    
+    body{
+            background-color: black;
+            color: white;
+        }
+.add1{
+    background-color: aqua;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 50px 30px 10px gray;
+    transform: rotate(180deg);
+    transition-delay: 0.5s;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+#div1 p:hover{
+    transform: rotate(180deg);
+    transition: 0.5s;
+    transition-delay: 0.2s;
+    box-shadow: 50px 30px 10px gray;
+    cursor: pointer;
+}
+
+#maindiv{
+    display: flex;
+    justify-content: center;
+    margin-top: 10%;
+}
+
+#butt1, #butt2{
+    margin-left: 45%;
+    border: 1px solid gray;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+#butt1:hover, #butt2:hover{
+    background-color: rgb(58, 58, 58);
+    color: white;
+    transition: 0.5s;
+    transition-delay: 0.2s;
+}
+
+.remove{
+    transition: 0.5s;
+    transition-delay: 0.2s;
+}
+
+#div1, #div2{
+    margin: 50px;
+}
+
+@media screen and (max-width: 1500px) and (min-width: 280px){
+    #div1, #div2{
+        margin: 10px;
+    }
+}
+
+@media screen and (max-width: 300px) and (min-width: 250px){
+    #div1, #div2{
+        margin: 20px;
+    }
+    body{
+        width: 150%;
+    }
+}
+    
+    </style>
+
+</head>
+<body>
+    
+    <div id="maindiv">
+
+        <div id="div1">
+
+            <p>Hey Hello World</p>
+            <p>Hey Hello World</p>
+            <p>Hey Hello World</p>
+            <p>Hey Hello World</p>
+            <p>Hey Hello World</p>
+            <p>Hey Hello World</p>
+            <p>Hey Hello World</p>
+            <p>Hey Hello World</p>
+            <p>Hey Hello World</p>
+            <p>Hey Hello World</p>
+
+        </div>  <!-- div1 ends here -->
+
+        <div id="div2">
+
+            <p>Hey How Are You</p>
+            <p>Hey How Are You</p>
+            <p>Hey How Are You</p>
+            <p>Hey How Are You</p>
+            <p>Hey How Are You</p>
+            <p>Hey How Are You</p>
+            <p>Hey How Are You</p>
+            <p>Hey How Are You</p>
+            <p>Hey How Are You</p>
+            <p>Hey How Are You</p>
+
+        </div>  <!-- div2 ends here -->
+
+    </div>  <!-- maindiv ends here   <br> <br> -->
+    
+    <button id="butt1" onclick="foo1()">Apply <abbr title="Cescading Style Sheets">CSS</abbr></button>
+
+    <button id="butt2" onclick="foo2()" style="display: none;">Remove <abbr title="Cescading Style Sheets">CSS</abbr></button>
+
+    <script>
+    
+    function foo1(){
+    var a = document.getElementById('div1').style.color = "red";
+    var b = document.getElementById('butt2').style.display = "inherit"
+    var c = document.getElementById('butt1').style.display = "none";
+    var d = document.getElementById('div1');
+    a;
+    b;
+    c;
+    d.className = 'add1';
+
+}
+
+function foo2(){
+    var e = document.getElementById('butt2').style.display = "none";
+    var f = document.getElementById('butt1').style.display = "inherit";
+    // var g = document.getElementsByClassName('remove');
+    var rem1 = document.getElementById('div1').style.color = "white";
+    var rem2 = document.getElementById('div1');
+
+    e;
+    f;
+    rem1;
+    rem2.className = 'remove';
+}
+    
+    </script>
+
+</body>
+</html>
